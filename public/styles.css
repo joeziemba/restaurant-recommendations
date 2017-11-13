@@ -1,0 +1,20 @@
+
+.selected {
+  background-color: lightblue;
+}
+
+.mts {
+  margin-top: 10px;
+}
+
+.mbl {
+  margin-bottom: 20px;
+}
+
+.error {
+  border: 1px solid red;
+  color: red;
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgba(255, 0, 0, .2);
+}
