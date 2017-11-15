@@ -9,14 +9,24 @@ before do
 end
 
 def get_data
-  data = File.read(CURRENT_FILE_PATH + "/data.json")
+  data = JSON.parse(File.read(CURRENT_FILE_PATH + "/data.json"))
   return data
 end
 
 get '/api/v1/data' do
-  get_data
+  data = get_data
+  data.to_json
 end
 
-post '/api/v1/data' do
+post '/api/v1/data/review' do
+  data = get_data
+  new_review = JSON.parse(request.body.read)
+  data["reviews"] << new_review
+  File.write("data.json", JSON.pretty_generate(data))
+
+  return get_data
+end
+
+post '/api/v1/data/restaurant' do
 
 end

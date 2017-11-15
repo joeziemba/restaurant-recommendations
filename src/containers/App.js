@@ -14,13 +14,14 @@ class App extends Component {
         name: "Test Rest",
         location: "Everywhere",
         description: "",
-        categories: ['gastropub', 'bar'],
+        categories: [],
         image: '',
         website: ''
       }],
       reviews: [{key: 1}],
       selectedId: 1
     }
+
     this.restaurantClick = this.restaurantClick.bind(this)
     this.addReview = this.addReview.bind(this)
     this.addRestaurant = this.addRestaurant.bind(this)
@@ -39,6 +40,10 @@ class App extends Component {
 
   // Add review function will be called by ReviewForm in it's onSubmit function and update this.state to add the new review
   addReview(newReview) {
+    fetch('http://localhost:4567/api/v1/data/review', {
+      method: 'POST',
+      body: JSON.stringify(newReview)
+    })
     let newReviews = this.state.reviews.concat([newReview])
     this.setState({
       reviews: newReviews
