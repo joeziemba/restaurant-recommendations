@@ -34,6 +34,12 @@ class RestaurantForm extends React.Component {
       image: this.state.image
     }
     this.props.addRestaurant(newRestaurant)
+
+    this.setState({
+      name:'',
+      location:'',
+      image:''
+    })
   }
 
   render() {
@@ -44,16 +50,19 @@ class RestaurantForm extends React.Component {
           name='name'
           label='Restaurant:'
           onChange={this.handleNameInput}
+          value={this.state.name}
         />
         <TextField
           name='location'
           label="Location"
           onChange={this.handleNameInput}
+          value={this.state.location}
         />
         <TextField
           name='image'
           label="Image URL"
           onChange={this.handleNameInput}
+          value={this.state.image}
         />
         <input type='submit' />
       </form>

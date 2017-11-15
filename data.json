@@ -133,6 +133,24 @@
       ],
       "image": "https://s3.amazonaws.com/horizon-production/images/restaurants/rock-bottom.jpeg",
       "website": "http://www.rockbottom.com/locations/boston"
+    },
+    {
+      "id": "loco-pez",
+      "name": "Loco Pez",
+      "location": "Fishtown",
+      "image": "http://philly.thedrinknation.com/uploads/images/2011-12-20-loco-pez-int2.jpg"
+    },
+    {
+      "id": "villa-rosa",
+      "name": "Villa Rosa",
+      "location": "Yardley",
+      "image": "https://b.zmtcdn.com/data/pictures/9/17020119/f9694630544e1d4f6fc002a1de271d00_featured_v2.jpg"
+    },
+    {
+      "id": "bourbon-& branch",
+      "name": "Bourbon & Branch",
+      "location": "Northern Liberties",
+      "image": "https://iotm-uploads.s3.amazonaws.com/bourbon1959951_256192307892190_694388697_n_300x300.png"
     }
   ],
   "reviews": [
@@ -189,6 +207,18 @@
       "name": "Tony Khoury",
       "rating": 20,
       "content": "I wish this place didnt exist, it ruined my whole chipotle exlerience for life. I have been doing chipotle for 6 years, about once a week. I got raw chiken, multiple peices. Almost threw up. Never again."
+    },
+    {
+      "restaurant_id": "loco-pez",
+      "name": "Joe",
+      "rating": "80",
+      "content": "Awesome Tacos, good margaritas. Best prices but gets crowded"
+    },
+    {
+      "restaurant_id": "bourbon-& branch",
+      "name": "Joe",
+      "rating": "100",
+      "content": "SO GOOD go for brunch seriously it's amazing"
     }
   ]
 }
