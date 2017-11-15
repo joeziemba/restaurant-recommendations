@@ -5,16 +5,21 @@ import Reviews from '../components/Reviews'
 import ReviewForm from '../components/ReviewForm'
 import RestaurantForm from '../components/RestaurantForm'
 
-import restaurants from '../constants/restaurants'
-import reviews from '../constants/reviews'
-
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      restaurants,
-      reviews,
-      selectedId: restaurants[0].id
+      restaurants: [{
+        id: 1,
+        name: "Test Rest",
+        location: "Everywhere",
+        description: "",
+        categories: ['gastropub', 'bar'],
+        image: '',
+        website: ''
+      }],
+      reviews: [{key: 1}],
+      selectedId: 1
     }
     this.restaurantClick = this.restaurantClick.bind(this)
     this.addReview = this.addReview.bind(this)
@@ -44,6 +49,21 @@ class App extends Component {
     let newRestaurants = this.state.restaurants.concat([newRestaurant])
     this.setState({
       restaurants: newRestaurants
+    })
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:4567/api/v1/data')
+    .then(response => response.json())
+    .then(body => {
+      let reviews = body.reviews
+      let restaurants = body.restaurants
+      this.setState({
+        restaurants: restaurants,
+        reviews: reviews,
+        selectedId: restaurants[0].id
+      })
+
     })
   }
 
