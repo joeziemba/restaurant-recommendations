@@ -189,24 +189,6 @@
       "name": "Tony Khoury",
       "rating": 20,
       "content": "I wish this place didnt exist, it ruined my whole chipotle exlerience for life. I have been doing chipotle for 6 years, about once a week. I got raw chiken, multiple peices. Almost threw up. Never again."
-    },
-    {
-      "restaurant_id": "jm-curley-boston",
-      "name": "Test",
-      "rating": "60",
-      "content": "test"
-    },
-    {
-      "restaurant_id": "dumpling-king-boston",
-      "name": "A new Review!",
-      "rating": "100",
-      "content": "IT WORKS?!?!"
-    },
-    {
-      "restaurant_id": "jm-curley-boston",
-      "name": "Joe",
-      "rating": "100",
-      "content": "So Great"
     }
   ]
 }

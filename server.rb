@@ -18,15 +18,13 @@ get '/api/v1/data' do
   data.to_json
 end
 
-post '/api/v1/data/review' do
+post '/api/v1/data/:endpoint' do
+  endpoint = params[:endpoint]
   data = get_data
   new_review = JSON.parse(request.body.read)
-  data["reviews"] << new_review
+
+  data[endpoint] << new_review
   File.write("data.json", JSON.pretty_generate(data))
 
-  return get_data
-end
-
-post '/api/v1/data/restaurant' do
-
+  redirect '/api/v1/data'
 end

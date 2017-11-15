@@ -40,7 +40,7 @@ class App extends Component {
 
   // Add review function will be called by ReviewForm in it's onSubmit function and update this.state to add the new review
   addReview(newReview) {
-    fetch('http://localhost:4567/api/v1/data/review', {
+    fetch('http://localhost:4567/api/v1/data/reviews', {
       method: 'POST',
       body: JSON.stringify(newReview)
     })
@@ -51,6 +51,10 @@ class App extends Component {
   }
 
   addRestaurant(newRestaurant) {
+    fetch('http://localhost:4567/api/v1/data/restaurants', {
+      method: 'POST',
+      body: JSON.stringify(newRestaurant)
+    })
     let newRestaurants = this.state.restaurants.concat([newRestaurant])
     this.setState({
       restaurants: newRestaurants
